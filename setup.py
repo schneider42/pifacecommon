@@ -1,7 +1,11 @@
 import sys
 import errno
 import subprocess
-from distutils.core import setup
+
+try:
+    from setuptools import setup
+except ImportError:
+    from distutils.core import setup
 
 
 VERSION_FILE = 'pifacecommon/version.py'
